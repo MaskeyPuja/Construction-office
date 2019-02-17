@@ -41,3 +41,8 @@ class TeamUpdateView(UpdateView):
 	template_name = 'build/team_form.html'
 	form_class = TeamForm
 	success_url = reverse_lazy('build:team_list')
+
+class TeamDeleteView(DeleteView):
+	model = Team
+	template_name = 'build/team_delete.html'
+	success_url = reverse_lazy('build:team_list')
