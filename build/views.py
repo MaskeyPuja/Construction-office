@@ -22,3 +22,7 @@ class HomeView(TemplateView):
 class TeamListView(ListView):
 	model = Team
 	template_name = 'build/team_list.html'
+
+class TeamDetailView(DetailView):
+	model = Team
+	template_name = 'build/team_detail.html'
