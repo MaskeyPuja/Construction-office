@@ -1,6 +1,9 @@
 from django.views.generic import TemplateView
 from build.models import PageCounter, Team
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from .forms import TeamForm
+
 
 class HomeView(TemplateView):
 
@@ -26,3 +29,15 @@ class TeamListView(ListView):
 class TeamDetailView(DetailView):
 	model = Team
 	template_name = 'build/team_detail.html'
+
+class TeamCreateView(CreateView):
+	model = Team
+	template_name = 'build/team_form.html'
+	form_class = TeamForm
+	success_url = reverse_lazy('build:team_list')
+
+class TeamUpdateView(UpdateView):
+	model = Team
+	template_name = 'build/team_form.html'
+	form_class = TeamForm
+	success_url = reverse_lazy('build:team_list')
