@@ -1,5 +1,6 @@
 from django.views.generic import TemplateView
-from build.models import PageCounter
+from build.models import PageCounter, Team
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 class HomeView(TemplateView):
 
@@ -17,3 +18,7 @@ class HomeView(TemplateView):
 			total_count.total_count = 1
 			total_count.save()
 		return context
+
+class TeamListView(ListView):
+	model = Team
+	template_name = 'build/team_list.html'
