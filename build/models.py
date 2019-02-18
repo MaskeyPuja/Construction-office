@@ -13,3 +13,10 @@ class Team(models.Model):
 
 	def __str__(self):
 		return self.full_name
+
+class Career(models.Model):
+	title = models.CharField(max_length=100)
+	pub_date = models.DateTimeField('date published')
+	due_date = models.DateTimeField('due date')
+	job_des = models.CharField(max_length=500)
+	qualification = models.CharField(max_length=200)
