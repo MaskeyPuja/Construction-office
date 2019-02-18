@@ -55,3 +55,7 @@ class TeamDeleteView(DeleteView):
 class CareerListView(ListView):
 	model = Career
 	template_name = 'build/career_list.html'
+
+class CareerDetailView(DetailView):
+	model = Career
+	template_name = 'build/detail_list.html'
