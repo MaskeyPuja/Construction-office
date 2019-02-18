@@ -11,13 +11,15 @@
                     <tr>
                         <th>S.N</th>
                         <th>Name</th>
+                   
                     </tr>
                     </thead>
                     <tbody>
                         {% for team in team_list %}
                         <tr>
                             <td class="filterable-cell">{{forloop.counter}}</td>
-                            <td class="filterable-cell"><a href="">{{ team.full_name }}</a></td>
+                            <td class="filterable-cell"><a href="#">{{ team.full_name }}</a></td>
+                       
                         </tr>
                         {%endfor%}
                     </tbody>

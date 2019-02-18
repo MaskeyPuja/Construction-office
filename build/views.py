@@ -20,6 +20,11 @@ class HomeView(TemplateView):
 			total_count = PageCounter()
 			total_count.total_count = 1
 			total_count.save()
+
+		team = Team.objects.all()
+		context['team'] = team
+		print(context)
+
 		return context
 
 class TeamListView(ListView):
