@@ -58,10 +58,21 @@ class CareerListView(ListView):
 
 class CareerDetailView(DetailView):
 	model = Career
-	template_name = 'build/detail_list.html'
+	template_name = 'build/career_detail.html'
 
 class CareerCreateView(CreateView):
 	model = Career
 	template_name = 'build/career_form.html'
 	form_class = CareerForm
+	success_url = reverse_lazy('build:career_list')
+
+class CareerUpdateView(UpdateView):
+	model = Career
+	template_name = 'build/career_form.html'
+	form_class = CareerForm
+	success_url = reverse_lazy('build:career_list')
+
+class CareerDeleteView(DetailView):
+	model = Career
+	template_name = 'build/career_delete.html'
 	success_url = reverse_lazy('build:career_list')
