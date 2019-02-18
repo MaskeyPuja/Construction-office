@@ -72,7 +72,7 @@ class CareerUpdateView(UpdateView):
 	form_class = CareerForm
 	success_url = reverse_lazy('build:career_list')
 
-class CareerDeleteView(DetailView):
+class CareerDeleteView(DeleteView):
 	model = Career
 	template_name = 'build/career_delete.html'
 	success_url = reverse_lazy('build:career_list')
