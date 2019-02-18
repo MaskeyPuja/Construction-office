@@ -20,3 +20,6 @@ class Career(models.Model):
 	due_date = models.DateTimeField('due date')
 	job_des = models.CharField(max_length=500)
 	qualification = models.CharField(max_length=200)
+
+	def __str__(self):
+		return self.title

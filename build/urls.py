@@ -10,4 +10,6 @@ urlpatterns = [
     path('team-add', views.TeamCreateView.as_view(), name='team_add'),
     path('team-edit/<int:pk>/', views.TeamUpdateView.as_view(), name='team_edit'),
     path('team-delete/<int:pk>/', views.TeamDeleteView.as_view(), name='team_delete'),
+
+    path('career-list', views.CareerListView.as_view(), name='career_list'),
 ]

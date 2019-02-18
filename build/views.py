@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from build.models import PageCounter, Team
+from build.models import PageCounter, Team, Career
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .forms import TeamForm
@@ -23,7 +23,6 @@ class HomeView(TemplateView):
 
 		team = Team.objects.all()
 		context['team'] = team
-		print(context)
 
 		return context
 
@@ -51,3 +50,8 @@ class TeamDeleteView(DeleteView):
 	model = Team
 	template_name = 'build/team_delete.html'
 	success_url = reverse_lazy('build:team_list')
+
+
+class CareerListView(ListView):
+	model = Career
+	template_name = 'build/career_list.html'
