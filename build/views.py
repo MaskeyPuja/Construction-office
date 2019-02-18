@@ -2,7 +2,7 @@ from django.views.generic import TemplateView
 from build.models import PageCounter, Team, Career
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .forms import TeamForm
+from .forms import TeamForm, CareerForm
 
 
 class HomeView(TemplateView):
@@ -59,3 +59,9 @@ class CareerListView(ListView):
 class CareerDetailView(DetailView):
 	model = Career
 	template_name = 'build/detail_list.html'
+
+class CareerCreateView(CreateView):
+	model = Career
+	template_name = 'build/career_form.html'
+	form_class = CareerForm
+	success_url = reverse_lazy('build:career_list')

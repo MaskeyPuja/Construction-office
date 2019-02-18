@@ -13,4 +13,5 @@ urlpatterns = [
 
     path('career-list', views.CareerListView.as_view(), name='career_list'),
     path('career-detail/<int:pk>/', views.CareerDetailView.as_view(), name='career_detail'),
+    path('career-add', views.CareerCreateView.as_view(), name='career_add'),
 ]
