@@ -17,4 +17,5 @@ urlpatterns = [
     path('career-edit/<int:pk>/', views.CareerUpdateView.as_view(), name='career_edit'),
     path('career-delete/<int:pk>/', views.CareerDeleteView.as_view(), name='career_delete'),
 
+    
 ]

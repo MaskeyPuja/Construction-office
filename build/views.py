@@ -76,3 +76,4 @@ class CareerDeleteView(DeleteView):
 	model = Career
 	template_name = 'build/career_delete.html'
 	success_url = reverse_lazy('build:career_list')
+
