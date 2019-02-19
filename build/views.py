@@ -30,6 +30,23 @@ class AboutView(TemplateView):
 
 	template_name = 'build/about-us.html'
 
+class ServiceView(TemplateView):
+
+	template_name = 'build/service.html'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TeamListView(ListView):
 	model = Team
 	template_name = 'build/team_list.html'
