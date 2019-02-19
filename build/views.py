@@ -26,6 +26,10 @@ class HomeView(TemplateView):
 
 		return context
 
+class AboutView(TemplateView):
+
+	template_name = 'build/about-us.html'
+
 class TeamListView(ListView):
 	model = Team
 	template_name = 'build/team_list.html'
@@ -76,4 +80,5 @@ class CareerDeleteView(DeleteView):
 	model = Career
 	template_name = 'build/career_delete.html'
 	success_url = reverse_lazy('build:career_list')
+
 
