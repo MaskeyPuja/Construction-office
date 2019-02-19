@@ -1,6 +1,9 @@
-<title>Career List</title>
+{% extends 'build/base.html' %}
 
-    <div class="d-flex justify-content-center">
+<title>{% block title %}Career List{% endblock %}</title>
+
+{% block body %}
+    <div class="d-flex justify-content-left">
         <div class="dash-right">
             <div class="widget-info margin-top-large">
                 <div class="widget-head">
@@ -19,8 +22,9 @@
                         {% for career in career_list %}
                             <tr> 
                                 <td class="filterable-cell">{{forloop.counter}}</td>
-                                <td class="filterable-cell"><a href="#">{{ career.title }}</a></td>
+                                <td class="filterable-cell"><a href="{% url 'build:career_detail' career.pk %}">{{ career.title }}</a></td>
                             </tr>
+
                         {%endfor%}
 
                     </tbody>
@@ -29,3 +33,5 @@
             </div>
         </div>
     </div>
+{% endblock %}
+

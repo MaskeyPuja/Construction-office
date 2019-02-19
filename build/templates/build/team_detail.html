@@ -1,5 +1,8 @@
-<title>Team Detail</title>
+{% extends 'build/base.html' %}
 
+<title>{% body block %}Team Detail{% endblock %}</title>
+
+{% body block %}
     <div class="formHolder">
         <div class="widget-info margin-top-large">
             <div class="widget-head">
@@ -16,3 +19,4 @@
             </div>
         </div>
     </div>
+{% endblock %}

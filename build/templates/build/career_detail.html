@@ -1,11 +1,14 @@
-<title>Career Detail</title>
+{% extends 'build/base.html' %}
 
+
+<title>{% block title %}Career Detail{% endblock %}</title>
+{% block body %}
     <div class="formHolder">
         <div class="widget-info margin-top-large">
             <div class="widget-head">
                 <div class="widget-body mt-2 horizontalForm">
                     <div class="widget-head">
-                        <h4><a href="#" title="">Career</a></h4>
+                        <h4><a href="{% url 'build:career_list' %}" title="">Career</a></h4>
                     </div>
                     <div class="widget-body">
                         {{career.title}}
@@ -18,3 +21,4 @@
             </div>
         </div>
     </div>
+{% endblock %}
