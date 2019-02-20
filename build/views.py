@@ -38,11 +38,9 @@ class ProjectView(TemplateView):
 
 	template_name = 'build/projects.html'
 
+class ContactView(TemplateView):
 
-
-
-
-
+	template_name = 'build/contact.html'
 
 
 
@@ -71,6 +69,8 @@ class TeamDeleteView(DeleteView):
 	model = Team
 	template_name = 'build/team_delete.html'
 	success_url = reverse_lazy('build:team_list')
+
+
 
 
 class CareerListView(ListView):
