@@ -34,9 +34,9 @@ class ServiceView(TemplateView):
 
 	template_name = 'build/service.html'
 
+class ProjectView(TemplateView):
 
-
-
+	template_name = 'build/projects.html'
 
 
 
